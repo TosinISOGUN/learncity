@@ -56,6 +56,10 @@ const VideoIntroduction = () => {
                 src={introVideo}
                 className="w-full h-full object-cover"
                 controls
+                autoPlay
+                muted
+                loop
+                playsInline
                 poster={videoThumbnail}
                 onPlay={() => {
                   setIsPlaying(true);
