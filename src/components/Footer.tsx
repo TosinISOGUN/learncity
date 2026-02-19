@@ -19,6 +19,7 @@ const Footer = () => (
             <li><Link to="/events" className="hover:opacity-100 transition-opacity">Events</Link></li>
             <li><Link to="/seminars" className="hover:opacity-100 transition-opacity">Seminars</Link></li>
             <li><Link to="/jobs" className="hover:opacity-100 transition-opacity">Job Openings</Link></li>
+            <li><a href="https://www.youtube.com/@Learncityng" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-opacity">YouTube Channel</a></li>
           </ul>
         </div>
         <div>
