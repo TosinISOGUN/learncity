@@ -7,30 +7,34 @@ const Footer = () => (
         <div>
           <h3 className="font-display text-2xl font-bold mb-4">Learncity</h3>
           <p className="text-sm opacity-70 leading-relaxed">
-            Learn the skills that get you paid. We make tech education simple, practical, and career-focused.
+            Practical, career-focused tech education. We equip learners with the skills, mentorship, and confidence to thrive in the digital economy.
           </p>
         </div>
         <div>
-          <h4 className="font-display font-semibold mb-4">Programs</h4>
+          <h4 className="font-display font-semibold mb-4">Learn</h4>
           <ul className="space-y-2 text-sm opacity-70">
-            <li><Link to="/programs" className="hover:opacity-100 transition-opacity">All Programs</Link></li>
-            <li><Link to="/programs" className="hover:opacity-100 transition-opacity">Engineering</Link></li>
-            <li><Link to="/programs" className="hover:opacity-100 transition-opacity">Design</Link></li>
-            <li><Link to="/programs" className="hover:opacity-100 transition-opacity">Data & AI</Link></li>
+            <li><Link to="/courses" className="hover:opacity-100 transition-opacity">Courses</Link></li>
+            <li><Link to="/private-tutor" className="hover:opacity-100 transition-opacity">Private Tutor</Link></li>
+            <li><Link to="/training" className="hover:opacity-100 transition-opacity">Training</Link></li>
+            <li><Link to="/events" className="hover:opacity-100 transition-opacity">Events</Link></li>
+            <li><Link to="/seminars" className="hover:opacity-100 transition-opacity">Seminars</Link></li>
+            <li><Link to="/jobs" className="hover:opacity-100 transition-opacity">Job Openings</Link></li>
           </ul>
         </div>
         <div>
           <h4 className="font-display font-semibold mb-4">Company</h4>
           <ul className="space-y-2 text-sm opacity-70">
-            <li><a href="#" className="hover:opacity-100 transition-opacity">About Us</a></li>
-            <li><a href="#" className="hover:opacity-100 transition-opacity">Careers</a></li>
-            <li><a href="#" className="hover:opacity-100 transition-opacity">Contact</a></li>
-            <li><a href="#" className="hover:opacity-100 transition-opacity">Blog</a></li>
+            <li><Link to="/about" className="hover:opacity-100 transition-opacity">About Us</Link></li>
+            <li><Link to="/locations" className="hover:opacity-100 transition-opacity">Locations</Link></li>
+            <li><Link to="/testimonials" className="hover:opacity-100 transition-opacity">Testimonials</Link></li>
+            <li><Link to="/partner" className="hover:opacity-100 transition-opacity">Partner With Us</Link></li>
+            <li><Link to="/contact" className="hover:opacity-100 transition-opacity">Contact Us</Link></li>
           </ul>
         </div>
         <div>
-          <h4 className="font-display font-semibold mb-4">Legal</h4>
+          <h4 className="font-display font-semibold mb-4">Support</h4>
           <ul className="space-y-2 text-sm opacity-70">
+            <li><Link to="/faq" className="hover:opacity-100 transition-opacity">FAQ</Link></li>
             <li><a href="#" className="hover:opacity-100 transition-opacity">Privacy Policy</a></li>
             <li><a href="#" className="hover:opacity-100 transition-opacity">Terms of Service</a></li>
             <li><a href="#" className="hover:opacity-100 transition-opacity">Refund Policy</a></li>

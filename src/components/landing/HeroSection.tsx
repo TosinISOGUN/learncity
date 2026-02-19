@@ -22,22 +22,20 @@ const HeroSection = () => (
             New cohort starting soon 🚀
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            No Tech Skills?{" "}
-            <span className="text-gradient-hero">No Problem.</span>
-            <br />Let's Fix That!
+            Your Future in Tech{" "}
+            <span className="text-gradient-hero">Starts Here.</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-lg mb-8 leading-relaxed">
-            Learn the skills that get you paid. Learncity makes tech simple, practical, and real.
-            Join thousands already building their futures with us.
+            Learncity transforms ambitious beginners into skilled professionals. Master in-demand tech skills through hands-on, expert-led programs — and launch a career you're proud of.
           </p>
           <div className="flex flex-wrap gap-3">
             <Button size="lg" asChild>
-              <Link to="/programs">
+              <Link to="/courses">
                 Explore Programs <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link to="/programs">Join Learncity</Link>
+              <Link to="/join">Join Learncity</Link>
             </Button>
           </div>
         </motion.div>
