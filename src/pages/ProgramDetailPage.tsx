@@ -126,7 +126,9 @@ const ProgramDetailPage = () => {
                   </div>
                 </div>
 
-                <Button className="w-full" size="lg">Enroll Now</Button>
+                <Button className="w-full" size="lg" asChild>
+                  <Link to={`/enroll/${program.id}`}>Enroll Now</Link>
+                </Button>
                 <p className="text-xs text-center text-muted-foreground">
                   Flexible payment plans available
                 </p>
