@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { cn } from "@/lib/utils";
+import logo from "@/assets/LC_logo.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -87,8 +89,12 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <Link to="/" className="font-display text-2xl font-bold text-primary tracking-tight">
-          Learncity
+        <Link to="/" className="flex items-center">
+          <img
+            src={logo}
+            alt="Learncity Logo"
+            className="h-10 w-auto md:h-12 transition-transform hover:scale-105"
+          />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
@@ -99,9 +105,8 @@ const Navbar = () => {
               <Link
                 key={item.to}
                 to={item.to!}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  location.pathname === item.to ? "text-primary" : "text-muted-foreground"
-                }`}
+                className={`text-sm font-medium transition-colors hover:text-primary ${location.pathname === item.to ? "text-primary" : "text-muted-foreground"
+                  }`}
               >
                 {item.label}
               </Link>

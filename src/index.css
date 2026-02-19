@@ -15,7 +15,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 50% 10%;
 
-    --primary: 168 60% 32%;
+    --primary: 115 43% 49%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 150 15% 93%;
@@ -32,11 +32,11 @@
 
     --border: 150 15% 88%;
     --input: 150 15% 88%;
-    --ring: 168 60% 32%;
+    --ring: 115 43% 49%;
 
     --radius: 0.75rem;
 
-    --hero-gradient: linear-gradient(135deg, hsl(168, 60%, 32%) 0%, hsl(190, 55%, 28%) 50%, hsl(210, 50%, 22%) 100%);
+    --hero-gradient: linear-gradient(135deg, hsl(115, 43%, 49%) 0%, hsl(115, 40%, 35%) 50%, hsl(115, 35%, 25%) 100%);
     --glow-accent: 0 0 60px hsl(38, 90%, 55%, 0.15);
     --card-shadow: 0 4px 24px -4px hsl(210, 50%, 10%, 0.08);
     --card-shadow-hover: 0 12px 40px -8px hsl(210, 50%, 10%, 0.15);
@@ -58,7 +58,7 @@
     --card-foreground: 150 20% 95%;
     --popover: 210 45% 10%;
     --popover-foreground: 150 20% 95%;
-    --primary: 168 55% 45%;
+    --primary: 115 50% 55%;
     --primary-foreground: 210 50% 6%;
     --secondary: 210 30% 15%;
     --secondary-foreground: 150 20% 95%;
@@ -70,7 +70,7 @@
     --destructive-foreground: 150 20% 95%;
     --border: 210 30% 18%;
     --input: 210 30% 18%;
-    --ring: 168 55% 45%;
+    --ring: 115 50% 55%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -98,7 +98,7 @@
 
 @layer utilities {
   .text-gradient-hero {
-    background: linear-gradient(135deg, hsl(168, 60%, 50%) 0%, hsl(38, 90%, 60%) 100%);
+    background: linear-gradient(135deg, hsl(115, 50%, 55%) 0%, hsl(38, 90%, 60%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
