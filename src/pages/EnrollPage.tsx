@@ -86,13 +86,6 @@ const EnrollPage = () => {
     }
   };
 
-  const handleWhatsAppRedirect = () => {
-    const message = encodeURIComponent(
-      `Hi Learncity! I've just submitted my enrollment form for the ${program.title} program. My name is ${formData.fullName}. I'd like to finalize my registration.`
-    );
-    window.open(`https://wa.me/2348123456789?text=${message}`, "_blank");
-  };
-
   if (isSuccess) {
     return (
       <>
@@ -107,20 +100,17 @@ const EnrollPage = () => {
               <div className="w-20 h-20 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle2 className="h-10 w-10" />
               </div>
-              <h1 className="text-3xl font-bold mb-4">You're Almost There!</h1>
+              <h1 className="text-3xl font-bold mb-4">Application Submitted!</h1>
               <p className="text-muted-foreground mb-8">
-                Thank you for choosing Learncity, <strong>{formData.fullName}</strong>. Your enrollment request for <strong>{program.title}</strong> has been received.
+                Thank you for choosing Learncity, <strong>{formData.fullName}</strong>. Your enrollment request for <strong>{program.title}</strong> has been received and processed.
               </p>
               <div className="space-y-4">
-                <Button className="w-full h-12 text-lg" onClick={handleWhatsAppRedirect}>
-                  <Send className="mr-2 h-5 w-5" /> Chat on WhatsApp
-                </Button>
-                <Button variant="outline" className="w-full h-12" asChild>
-                  <Link to="/dashboard">Go to Dashboard</Link>
+                <Button className="w-full h-12 text-lg" asChild>
+                  <Link to="/">Go back to home</Link>
                 </Button>
               </div>
-              <p className="text-xs text-muted-foreground mt-6">
-                Redirecting to WhatsApp allows us to verify your payment and provide immediate support.
+              <p className="text-xs text-muted-foreground mt-8">
+                Our admissions team will review your application and reach out to you via email within 24-48 hours with the next steps.
               </p>
             </motion.div>
           </div>
