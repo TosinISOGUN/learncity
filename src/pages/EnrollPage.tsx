@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { programs } from "@/data/programs";
 import { Button } from "@/components/ui/button";
@@ -35,6 +35,11 @@ const EnrollPage = () => {
     background: "",
     referral: "",
   });
+
+  // Ensure page scrolls to top on mount or when success state triggers
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [isSuccess]);
 
   if (!program) {
     return (
@@ -106,7 +111,7 @@ const EnrollPage = () => {
               </p>
               <div className="space-y-4">
                 <Button className="w-full h-12 text-lg" asChild>
-                  <Link to="/">Go back to home</Link>
+                  <Link to="/">Go back to Home</Link>
                 </Button>
               </div>
               <p className="text-xs text-muted-foreground mt-8">
