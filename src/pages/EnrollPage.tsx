@@ -49,19 +49,41 @@ const EnrollPage = () => {
     );
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSuccess(true);
-      toast({
-        title: "Application Received!",
-        description: "We've received your enrollment request. Our team will contact you shortly.",
+    try {
+      const response = await fetch("https://formspree.io/f/xreaaypl", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          ...formData,
+          programTitle: program.title,
+          programId: program.id
+        })
       });
-    }, 1500);
+
+      if (response.ok) {
+        setIsSuccess(true);
+        toast({
+          title: "Application Received!",
+          description: "We've received your enrollment request. Our team will contact you shortly.",
+        });
+      } else {
+        throw new Error("Failed to submit application");
+      }
+    } catch (error) {
+      toast({
+        title: "Submission Error",
+        description: "Something went wrong while sending your application. Please try again or contact support.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleWhatsAppRedirect = () => {
