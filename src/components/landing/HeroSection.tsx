@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
+import heroImage from "@/assets/learncity_images/images/Eso-8.webp";
 
 const skills = [
   "Product Design", "Data Analysis", "Cybersecurity", "Software Engineering",
