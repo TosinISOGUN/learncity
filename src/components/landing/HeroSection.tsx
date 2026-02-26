@@ -10,7 +10,7 @@ const skills = [
 ];
 
 const HeroSection = () => (
-  <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
+  <section className="relative pt-24 pb-8 md:pt-32 md:pb-12 overflow-hidden">
     <div className="container mx-auto px-4">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <motion.div
