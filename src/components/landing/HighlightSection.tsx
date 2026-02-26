@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -47,13 +47,6 @@ const HighlightSection = () => {
     return () => observer.disconnect();
   }, [emblaApi]);
 
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
-
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
 
   return (
     <section className="relative pt-0 pb-4 md:pt-0 md:pb-8 overflow-hidden bg-background">
@@ -75,7 +68,7 @@ const HighlightSection = () => {
                     <img
                       src={src}
                       alt={`Slide ${index + 1}`}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-700"
                       loading="lazy"
                       decoding="async"
                       width={600}
@@ -86,23 +79,6 @@ const HighlightSection = () => {
               </div>
             </div>
 
-            {/* Navigation Arrows */}
-            <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-              <button
-                onClick={scrollPrev}
-                className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors pointer-events-auto"
-                aria-label="Previous slide"
-              >
-                <ChevronLeft size={24} />
-              </button>
-              <button
-                onClick={scrollNext}
-                className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors pointer-events-auto"
-                aria-label="Next slide"
-              >
-                <ChevronRight size={24} />
-              </button>
-            </div>
 
             {/* Overlay Gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
