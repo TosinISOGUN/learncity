@@ -50,7 +50,7 @@ const HeroSection = () => (
             <img src={heroImage} alt="Students collaborating at Learncity" className="w-full h-auto object-cover" />
           </div>
           <div className="absolute -bottom-4 -left-4 bg-accent text-accent-foreground px-5 py-3 rounded-xl font-display font-bold text-sm shadow-lg">
-            2,000+ Students Trained
+            Over 1000 impacts made
           </div>
         </motion.div>
       </div>
