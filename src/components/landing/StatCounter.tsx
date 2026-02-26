@@ -15,18 +15,21 @@ const StatCounter = ({ value, label }: StatCounterProps) => {
   const suffix = value.replace(/[0-9,]/g, "");
 
   const count = useMotionValue(0);
+  const isNumeric = !isNaN(numericPart);
+
   const rounded = useTransform(count, (latest) => {
+    if (!isNumeric) return value;
     return Math.floor(latest).toLocaleString() + suffix;
   });
 
   useEffect(() => {
-    if (isInView) {
+    if (isInView && isNumeric) {
       animate(count, numericPart, {
         duration: 2,
         ease: "easeOut",
       });
     }
-  }, [isInView, count, numericPart]);
+  }, [isInView, count, numericPart, isNumeric]);
 
   return (
     <div ref={ref} className="flex flex-col items-center">

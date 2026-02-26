@@ -49,15 +49,15 @@ const HeroSection = () => (
           <div className="rounded-2xl overflow-hidden card-elevated">
             <img
               src={heroImage}
-              alt="Students collaborating at Learncity"
-              className="w-full h-auto object-cover"
+              alt="Learncity Student studying on a laptop in a modern environment"
+              className="relative z-10 w-full h-auto rounded-2xl shadow-2xl object-cover"
               fetchPriority="high"
               decoding="async"
-              width={800}
+              width={600}
               height={600}
             />
           </div>
-          <div className="absolute -bottom-4 -left-4 bg-accent/90 backdrop-blur-sm text-accent-foreground px-5 py-3 rounded-xl font-display font-bold text-sm shadow-lg will-change-transform">
+          <div className="absolute -bottom-4 -left-4 z-20 bg-accent/90 backdrop-blur-sm text-accent-foreground px-5 py-3 rounded-xl font-display font-bold text-sm shadow-lg will-change-transform">
             Over 1000 impacts made
           </div>
         </motion.div>

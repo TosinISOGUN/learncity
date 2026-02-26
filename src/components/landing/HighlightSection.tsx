@@ -44,7 +44,7 @@ const HighlightSection = () => {
                   <div key={index} className="embla__slide flex-[0_0_100%] h-full will-change-transform">
                     <img
                       src={src}
-                      alt={`Slide ${index + 1}`}
+                      alt={`Learncity campus and student activity spotlight ${index + 1}`}
                       className="w-full h-full object-cover transition-transform duration-700"
                       loading="lazy"
                       decoding="async"
@@ -101,12 +101,12 @@ const HighlightSection = () => {
                 </div>
                 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-3 md:p-4 flex flex-col gap-3 border border-white/10">
                   <div className="flex items-center gap-3">
-                    <img src={logoPlaceholder} alt="Accreditation" className="w-5 h-5 flex-shrink-0 object-contain invert" />
+                    <img src={logoPlaceholder} alt="Adaptive Future Technologies Accreditation Logo" className="w-5 h-5 flex-shrink-0 object-contain invert" />
                     <span className="font-bold uppercase tracking-wider text-[10px] sm:text-xs leading-tight">ADAPTIVE FUTURE TECHNOLOGIES</span>
                   </div>
                   <div className="h-px bg-white/10" />
                   <div className="flex items-center gap-3">
-                    <img src={logoPlaceholder} alt="Accreditation" className="w-5 h-5 flex-shrink-0 object-contain invert" />
+                    <img src={logoPlaceholder} alt="CareerLink Partner Logo" className="w-5 h-5 flex-shrink-0 object-contain invert" />
                     <span className="font-bold uppercase tracking-wider text-[10px] sm:text-xs leading-tight">CAREERLINK</span>
                   </div>
                 </div>

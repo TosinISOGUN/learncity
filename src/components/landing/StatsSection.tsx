@@ -1,10 +1,10 @@
 import StatCounter from "./StatCounter";
 
 const stats = [
-  { value: "2,000+", label: "Students Trained" },
-  { value: "12+", label: "Courses Running" },
-  { value: "1,200+", label: "Graduates Thriving" },
-  { value: "95%", label: "Completion Rate" },
+  { value: "Thousands", label: "of Impactful Connections" },
+  { value: "Diverse", label: "Tech Specializations" },
+  { value: "Limitless", label: "Career Potential" },
+  { value: "Verified", label: "Professional Growth" },
 ];
 
 const StatsSection = () => (
