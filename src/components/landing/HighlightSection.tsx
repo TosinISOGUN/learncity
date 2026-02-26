@@ -23,29 +23,6 @@ const HighlightSection = () => {
     Autoplay({ delay: 4000, stopOnInteraction: false, playOnInit: true })
   ]);
 
-  // Stop autoplay when not in view
-  useEffect(() => {
-    if (!emblaApi) return;
-    const autoplay = emblaApi.plugins().autoplay;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            autoplay.play();
-          } else {
-            autoplay.stop();
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const emblaNode = emblaApi.rootNode();
-    observer.observe(emblaNode);
-
-    return () => observer.disconnect();
-  }, [emblaApi]);
 
 
   return (
@@ -166,19 +143,6 @@ const HighlightSection = () => {
               </h2>
             </div>
 
-            <div className="relative z-10 flex justify-end mt-auto h-1/2">
-              <div className="relative h-full w-full flex justify-end">
-                <img
-                  src={img2}
-                  alt="Student Success"
-                  className="h-full w-auto object-contain rounded-2xl shadow-2xl mix-blend-overlay brightness-125"
-                />
-                {/* Floating Icons */}
-                <div className="absolute -top-4 -left-4 w-10 h-10 bg-white/5 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/10 rotate-12">
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-white/40 to-white/10 animate-pulse" />
-                </div>
-              </div>
-            </div>
           </motion.div>
 
         </div>
