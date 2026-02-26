@@ -47,9 +47,17 @@ const HeroSection = () => (
           className="relative"
         >
           <div className="rounded-2xl overflow-hidden card-elevated">
-            <img src={heroImage} alt="Students collaborating at Learncity" className="w-full h-auto object-cover" />
+            <img
+              src={heroImage}
+              alt="Students collaborating at Learncity"
+              className="w-full h-auto object-cover"
+              fetchPriority="high"
+              decoding="async"
+              width={800}
+              height={600}
+            />
           </div>
-          <div className="absolute -bottom-4 -left-4 bg-accent text-accent-foreground px-5 py-3 rounded-xl font-display font-bold text-sm shadow-lg">
+          <div className="absolute -bottom-4 -left-4 bg-accent/90 backdrop-blur-sm text-accent-foreground px-5 py-3 rounded-xl font-display font-bold text-sm shadow-lg will-change-transform">
             Over 1000 impacts made
           </div>
         </motion.div>

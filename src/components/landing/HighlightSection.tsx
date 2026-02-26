@@ -19,7 +19,33 @@ import logoPlaceholder from "@/assets/LC_logo.png";
 const carouselImages = [img1, img2, img3, img4, img5];
 
 const HighlightSection = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 4000, stopOnInteraction: false })]);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 4000, stopOnInteraction: false, playOnInit: true })
+  ]);
+
+  // Stop autoplay when not in view
+  useEffect(() => {
+    if (!emblaApi) return;
+    const autoplay = emblaApi.plugins().autoplay;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            autoplay.play();
+          } else {
+            autoplay.stop();
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const emblaNode = emblaApi.rootNode();
+    observer.observe(emblaNode);
+
+    return () => observer.disconnect();
+  }, [emblaApi]);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -40,16 +66,20 @@ const HighlightSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-4 relative group h-[400px] md:h-[500px] lg:h-[500px] overflow-hidden rounded-3xl"
+            className="lg:col-span-4 relative group h-[400px] md:h-[500px] lg:h-[500px] overflow-hidden rounded-3xl will-change-transform"
           >
             <div className="embla h-full" ref={emblaRef}>
               <div className="embla__container h-full flex">
                 {carouselImages.map((src, index) => (
-                  <div key={index} className="embla__slide flex-[0_0_100%] h-full">
+                  <div key={index} className="embla__slide flex-[0_0_100%] h-full will-change-transform">
                     <img
                       src={src}
                       alt={`Slide ${index + 1}`}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                      decoding="async"
+                      width={600}
+                      height={500}
                     />
                   </div>
                 ))}
@@ -60,14 +90,14 @@ const HighlightSection = () => {
             <div className="absolute inset-0 flex items-center justify-between px-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
               <button
                 onClick={scrollPrev}
-                className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white hover:bg-white/40 transition-colors pointer-events-auto"
+                className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors pointer-events-auto"
                 aria-label="Previous slide"
               >
                 <ChevronLeft size={24} />
               </button>
               <button
                 onClick={scrollNext}
-                className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white hover:bg-white/40 transition-colors pointer-events-auto"
+                className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/30 transition-colors pointer-events-auto"
                 aria-label="Next slide"
               >
                 <ChevronRight size={24} />
@@ -116,7 +146,7 @@ const HighlightSection = () => {
                 <div className="flex gap-1 mb-4 text-accent">
                   {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
                 </div>
-                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-3 md:p-4 flex flex-col gap-3 border border-white/20">
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-3 md:p-4 flex flex-col gap-3 border border-white/10">
                   <div className="flex items-center gap-3">
                     <img src={logoPlaceholder} alt="Accreditation" className="w-5 h-5 flex-shrink-0 object-contain invert" />
                     <span className="font-bold uppercase tracking-wider text-[10px] sm:text-xs leading-tight">ADAPTIVE FUTURE TECHNOLOGIES</span>
@@ -147,7 +177,7 @@ const HighlightSection = () => {
             </div>
 
             <div className="relative z-10">
-              <div className="inline-block bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-2 mb-6">
+              <div className="inline-block bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-2 mb-6">
                 <p className="text-white font-semibold text-sm">
                   Elevate your skills <span className="text-accent font-bold">Today.</span>
                 </p>
@@ -168,7 +198,7 @@ const HighlightSection = () => {
                   className="h-full w-auto object-contain rounded-2xl shadow-2xl mix-blend-overlay brightness-125"
                 />
                 {/* Floating Icons */}
-                <div className="absolute -top-4 -left-4 w-10 h-10 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/20 rotate-12">
+                <div className="absolute -top-4 -left-4 w-10 h-10 bg-white/5 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/10 rotate-12">
                   <div className="w-6 h-6 rounded-full bg-gradient-to-br from-white/40 to-white/10 animate-pulse" />
                 </div>
               </div>
