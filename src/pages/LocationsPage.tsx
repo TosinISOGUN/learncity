@@ -3,10 +3,9 @@ import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const locations = [
-  { city: "Lagos", address: "42 Adeola Odeku Street, Victoria Island, Lagos", phone: "+234 801 234 5678", email: "lagos@learncity.com", hours: "Mon – Fri: 8AM – 6PM, Sat: 9AM – 3PM", desc: "Our flagship campus in the heart of Lagos. Fully equipped labs, collaborative spaces, and a vibrant learning community." },
-  { city: "Abuja", address: "15 Aminu Kano Crescent, Wuse 2, Abuja", phone: "+234 802 345 6789", email: "abuja@learncity.com", hours: "Mon – Fri: 9AM – 5PM", desc: "A modern learning center in the capital city. Ideal for professionals and students in the FCT region." },
-  { city: "Port Harcourt", address: "8 Aba Road, GRA Phase 2, Port Harcourt", phone: "+234 803 456 7890", email: "ph@learncity.com", hours: "Mon – Fri: 9AM – 5PM", desc: "Serving the South-South region with the same quality instruction and career support as all Learncity campuses." },
-  { city: "Virtual Campus", address: "Anywhere with internet", phone: "+234 800 LEARNCITY", email: "virtual@learncity.com", hours: "Flexible scheduling available", desc: "Can't visit in person? Our virtual campus brings the full Learncity experience to your screen — live classes, mentorship, and community." },
+  { city: "Ibadan (HQ)", address: "3, Olubi Close, New Bodija Estate, Ibadan, Oyo State", phone: "+234 810 792 7525", email: "infolearncity@gmail.com", hours: "Mon – Fri: 9AM – 5PM", desc: "Our primary campus in Ibadan. Fully equipped labs, collaborative spaces, and a vibrant learning community." },
+  { city: "Lagos Hub", address: "Connect with us for Lagos schedules", phone: "+234 810 792 7525", email: "infolearncity@gmail.com", hours: "By Appointment", desc: "Flexible learning options and periodic workshops in Lagos. Contact us for the current schedule." },
+  { city: "Virtual Campus", address: "Anywhere with internet", phone: "+234 810 792 7525", email: "infolearncity@gmail.com", hours: "Flexible scheduling available", desc: "Our virtual campus brings the full Learncity experience to your screen — live classes, mentorship, and community." },
 ];
 
 const LocationsPage = () => (

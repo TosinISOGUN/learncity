@@ -119,7 +119,7 @@ const Navbar = () => {
             <Button size="sm" onClick={() => navigate("/dashboard")}>Dashboard</Button>
           ) : (
             <>
-              <Button variant="ghost" size="sm" onClick={() => navigate("/login")}>Log In</Button>
+              {/* <Button variant="ghost" size="sm" onClick={() => navigate("/login")}>Log In</Button> */}
               <Button size="sm" onClick={() => navigate("/join")}>Join Learncity</Button>
             </>
           )}
@@ -189,7 +189,7 @@ const Navbar = () => {
                   <Button size="sm" onClick={() => { setOpen(false); navigate("/dashboard"); }}>Dashboard</Button>
                 ) : (
                   <>
-                    <Button variant="ghost" size="sm" className="justify-start" onClick={() => { setOpen(false); navigate("/login"); }}>Log In</Button>
+                    {/* <Button variant="ghost" size="sm" className="justify-start" onClick={() => { setOpen(false); navigate("/login"); }}>Log In</Button> */}
                     <Button size="sm" onClick={() => { setOpen(false); navigate("/join"); }}>Join Learncity</Button>
                   </>
                 )}

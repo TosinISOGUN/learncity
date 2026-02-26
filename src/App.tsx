@@ -22,6 +22,7 @@ import ContactUsPage from "./pages/ContactUsPage";
 import PartnerWithUsPage from "./pages/PartnerWithUsPage";
 import LoginPage from "./pages/LoginPage";
 import JoinPage from "./pages/JoinPage";
+import ComingSoon from "./pages/ComingSoon";
 import EnrollPage from "./pages/EnrollPage";
 import DashboardPage from "./pages/DashboardPage";
 import NotFound from "./pages/NotFound";
@@ -53,7 +54,8 @@ const App = () => (
             <Route path="/contact" element={<ContactUsPage />} />
             <Route path="/partner" element={<PartnerWithUsPage />} />
             <Route path="/login" element={<LoginPage />} />
-            <Route path="/join" element={<JoinPage />} />
+            <Route path="/join" element={<ComingSoon />} />
+            <Route path="/coming-soon" element={<ComingSoon />} />
             <Route path="/enroll/:id" element={<EnrollPage />} />
             <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="*" element={<NotFound />} />
