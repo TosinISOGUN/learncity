@@ -81,8 +81,10 @@ const HighlightSection = () => {
               <h3 className="text-2xl md:text-3xl font-bold text-primary leading-tight">
                 Confused on what skill to enroll for?
               </h3>
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 mt-6">
-                Take Quiz <ArrowRight className="ml-2 h-4 w-4" />
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 mt-6" asChild>
+                <Link to="/quiz">
+                  Take Quiz <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </Button>
             </motion.div>
 

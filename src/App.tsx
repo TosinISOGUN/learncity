@@ -23,6 +23,7 @@ import PartnerWithUsPage from "./pages/PartnerWithUsPage";
 import LoginPage from "./pages/LoginPage";
 import JoinPage from "./pages/JoinPage";
 import ComingSoon from "./pages/ComingSoon";
+import CareerQuiz from "./pages/CareerQuiz";
 import EnrollPage from "./pages/EnrollPage";
 import DashboardPage from "./pages/DashboardPage";
 import NotFound from "./pages/NotFound";
@@ -39,6 +40,7 @@ const App = () => (
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/quiz" element={<CareerQuiz />} />
             <Route path="/programs" element={<ProgramsPage />} />
             <Route path="/programs/:id" element={<ProgramDetailPage />} />
             <Route path="/courses" element={<CoursesPage />} />
