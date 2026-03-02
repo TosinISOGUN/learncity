@@ -10,7 +10,7 @@ Learncity provides a structured learning environment where students can enroll i
 
 - **Structured Programs**: Intensive training programs ranging from 3 to 11 months.
 - **Flexible Learning**: Both physical and virtual formats available.
-- **Industry-Ready Curriculum**: Practical, project-based curriculum focusing on modern tech stacks.
+- **Industry-Ready Curriculum**: Practical, project-based curriculum focusing on modern tech-stacks.
 - **Career Focus**: Designed to take students from basics to employment-ready.
 
 ## Technology Stack
