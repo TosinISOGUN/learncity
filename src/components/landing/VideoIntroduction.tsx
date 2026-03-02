@@ -1,13 +1,20 @@
 import { motion } from "framer-motion";
 import { Youtube, Play, ArrowRight } from "lucide-react";
-import introVideo from "@/assets/LC_introduction.mp4";
-import videoThumbnail from "@/assets/LC_thumbnail.png";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const VideoIntroduction = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+      setHasStarted(true);
+    }
+  };
 
   return (
     <section className="py-24 bg-foreground overflow-hidden">
@@ -53,14 +60,14 @@ const VideoIntroduction = () => {
             {/* Video Container with Premium styling */}
             <div className="relative aspect-video rounded-3xl overflow-hidden border-4 border-white/10 shadow-2xl bg-black group/video">
               <video
-                src={introVideo}
+                ref={videoRef}
+                src={hasStarted ? "/LC_introduction.mp4" : undefined}
                 className="w-full h-full object-cover"
-                controls
-                autoPlay
+                controls={hasStarted}
                 muted
                 loop
                 playsInline
-                poster={videoThumbnail}
+                preload="none"
                 onPlay={() => {
                   setIsPlaying(true);
                   setHasStarted(true);
@@ -74,10 +81,11 @@ const VideoIntroduction = () => {
                   initial={{ opacity: 1 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="absolute inset-0 pointer-events-none"
+                  className="absolute inset-0 cursor-pointer"
+                  onClick={handlePlay}
                 >
                   {/* Play Nudge Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center group-hover:bg-black/20 transition-colors">
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
                     <motion.div
                       animate={{ scale: [1, 1.1, 1] }}
                       transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
@@ -88,7 +96,7 @@ const VideoIntroduction = () => {
                   </div>
 
                   {/* Duration Badge */}
-                  <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-lg border border-white/10 flex items-center gap-1.5 uppercase tracking-widest">
+                  <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-lg border border-white/10 flex items-center gap-1.5 uppercase tracking-widest pointer-events-none">
                     <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
                     30s Intro
                   </div>

@@ -7,14 +7,14 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
 // Import images for the carousel
-import img1 from "@/assets/learncity_images/images/Eso-2.webp";
-import img2 from "@/assets/learncity_images/images/Eso-4.webp";
-import img3 from "@/assets/learncity_images/images/Eso-6.webp";
-import img4 from "@/assets/learncity_images/images/Eso-8.webp";
-import img5 from "@/assets/learncity_images/images/Eso-10.webp";
+import img1 from "@/assets/learncity_images/images/Eso-2-opt.webp";
+import img2 from "@/assets/learncity_images/images/Eso-4-opt.webp";
+import img3 from "@/assets/learncity_images/images/Eso-6-opt.webp";
+import img4 from "@/assets/learncity_images/images/Eso-8-opt.webp";
+import img5 from "@/assets/learncity_images/images/Eso-10-opt.webp";
 
 // Mock accreditation logos/images if not available
-import logoPlaceholder from "@/assets/LC_logo.png";
+import logoPlaceholder from "@/assets/LC_logo.webp";
 
 const carouselImages = [img1, img2, img3, img4, img5];
 

@@ -3,10 +3,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/landing/HeroSection";
 import HighlightSection from "@/components/landing/HighlightSection";
-import VideoIntroduction from "@/components/landing/VideoIntroduction";
+
 import CoursesSection from "@/components/landing/CoursesSection";
 
 // Lazy load deeper sections
+const VideoIntroduction = lazy(() => import("@/components/landing/VideoIntroduction"));
 const SchoolsSection = lazy(() => import("@/components/landing/SchoolsSection"));
 const WhyChooseUsSection = lazy(() => import("@/components/landing/WhyChooseUsSection"));
 const StatsSection = lazy(() => import("@/components/landing/StatsSection"));
@@ -28,7 +29,9 @@ const Index = () => (
       <HighlightSection />
 
       {/* Immediatately visible sections are static for smoothness */}
-      <VideoIntroduction />
+      <Suspense fallback={<SectionSkeleton height="h-[500px]" />}>
+        <VideoIntroduction />
+      </Suspense>
       <CoursesSection />
 
       {/* Deeper sections are individually lazy-loaded */}

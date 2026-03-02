@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { ChevronLeft, Rocket } from "lucide-react";
-import logo from "@/assets/LC_logo.png";
+import logo from "@/assets/LC_logo.webp";
 
 const ComingSoon = () => {
   const navigate = useNavigate();
