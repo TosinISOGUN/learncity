@@ -1,20 +1,41 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { Youtube, Play, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const VideoIntroduction = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
 
   const handlePlay = () => {
     if (videoRef.current) {
-      videoRef.current.play();
+      videoRef.current.play().catch(err => {
+        console.warn("Video autoplay failed (probably browser policy):", err);
+      });
       setIsPlaying(true);
       setHasStarted(true);
     }
   };
+
+  useEffect(() => {
+    if (isInView && !hasStarted) {
+      setHasStarted(true);
+    }
+  }, [isInView, hasStarted]);
+
+  // Once the source is loaded (hasStarted), try playing it
+  useEffect(() => {
+    if (hasStarted && videoRef.current && !isPlaying) {
+      videoRef.current.play().then(() => {
+        setIsPlaying(true);
+      }).catch(err => {
+        console.warn("Video play error on source load:", err);
+      });
+    }
+  }, [hasStarted]);
 
   return (
     <section className="py-24 bg-foreground overflow-hidden">
@@ -52,6 +73,7 @@ const VideoIntroduction = () => {
           </motion.div>
 
           <motion.div
+            ref={sectionRef}
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
