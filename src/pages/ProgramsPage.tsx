@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { programs, categories, levels } from "@/data/programs";
+import { programs, categories } from "@/data/programs";
 import { Clock, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -10,12 +10,10 @@ import PriceDisplay from "@/components/PriceDisplay";
 
 const ProgramsPage = () => {
   const [category, setCategory] = useState("All");
-  const [level, setLevel] = useState("All");
 
   const filtered = programs.filter((p) => {
     const catMatch = category === "All" || p.category === category;
-    const lvlMatch = level === "All" || p.level === level;
-    return catMatch && lvlMatch;
+    return catMatch;
   });
 
   return (
@@ -40,28 +38,11 @@ const ProgramsPage = () => {
                     key={c}
                     onClick={() => setCategory(c)}
                     className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${category === c
-                        ? "bg-primary text-primary-foreground border-primary"
-                        : "bg-card text-muted-foreground border-border hover:border-primary/50"
+                      ? "bg-primary text-primary-foreground border-primary"
+                      : "bg-card text-muted-foreground border-border hover:border-primary/50"
                       }`}
                   >
                     {c}
-                  </button>
-                ))}
-              </div>
-            </div>
-            <div>
-              <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider block mb-2">Level</span>
-              <div className="flex flex-wrap gap-2">
-                {levels.map((l) => (
-                  <button
-                    key={l}
-                    onClick={() => setLevel(l)}
-                    className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${level === l
-                        ? "bg-primary text-primary-foreground border-primary"
-                        : "bg-card text-muted-foreground border-border hover:border-primary/50"
-                      }`}
-                  >
-                    {l}
                   </button>
                 ))}
               </div>

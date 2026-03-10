@@ -110,7 +110,7 @@ export const programs: Program[] = [
     category: "Security",
     level: "Beginner",
     duration: "6 Months",
-    price: "₦850,000 ₦425,000",
+    price: "₦425,000",
     format: "Physical / Virtual",
     outcomes: [
       "Identify and mitigate security vulnerabilities",
@@ -260,7 +260,7 @@ export const programs: Program[] = [
       { week: "Month 2", title: "Software Mastery", topics: ["Vectory Design (Illustrator)", "Image Manipulation (Photoshop)", "Layout Design"] },
       { week: "Month 3", title: "Brand Identity", topics: ["Logo Design", "Packaging", "Final Portfolio Build"] },
     ],
-    instructor: { name: "Olamide Olusegun", role: "Senior Brand Designer", bio: "Crafting visual stories for major African brands for over 7 years." },
+    instructor: { name: "Oluwadare Boluwatife", role: "Senior Brand Designer", bio: "Crafting visual stories for major African brands for over 7 years." },
   },
   {
     id: "video-editing",
@@ -362,4 +362,4 @@ export const schools = [
 ];
 
 export const categories = ["All", "Engineering", "Design", "Data", "AI", "Creative", "Security", "Marketing", "Management"];
-export const levels = ["All", "Beginner", "Intermediate", "Advanced"];
+export const levels = ["All", "Beginner"];

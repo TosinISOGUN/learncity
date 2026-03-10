@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { programs, categories, levels } from "@/data/programs";
+import { programs, categories } from "@/data/programs";
 import { Clock, ArrowRight, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -9,14 +9,12 @@ import PriceDisplay from "@/components/PriceDisplay";
 
 const CoursesPage = () => {
   const [category, setCategory] = useState("All");
-  const [level, setLevel] = useState("All");
   const [search, setSearch] = useState("");
 
   const filtered = programs.filter((p) => {
     const catMatch = category === "All" || p.category === category;
-    const lvlMatch = level === "All" || p.level === level;
     const searchMatch = !search || p.title.toLowerCase().includes(search.toLowerCase()) || p.shortDescription.toLowerCase().includes(search.toLowerCase());
-    return catMatch && lvlMatch && searchMatch;
+    return catMatch && searchMatch;
   });
 
   return (
@@ -51,16 +49,6 @@ const CoursesPage = () => {
               ))}
             </div>
           </div>
-          <div>
-            <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider block mb-2">Level</span>
-            <div className="flex flex-wrap gap-2">
-              {levels.map((l) => (
-                <button key={l} onClick={() => setLevel(l)} className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${level === l ? "bg-primary text-primary-foreground border-primary" : "bg-card text-muted-foreground border-border hover:border-primary/50"}`}>
-                  {l}
-                </button>
-              ))}
-            </div>
-          </div>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -83,11 +71,13 @@ const CoursesPage = () => {
           ))}
         </div>
 
-        {filtered.length === 0 && (
-          <div className="text-center py-16 text-muted-foreground">No courses match your search. Try different filters or keywords.</div>
-        )}
+        {
+          filtered.length === 0 && (
+            <div className="text-center py-16 text-muted-foreground">No courses match your search. Try different filters or keywords.</div>
+          )
+        }
       </div>
-    </PageLayout>
+    </PageLayout >
   );
 };
 
