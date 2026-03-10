@@ -18,7 +18,6 @@ import FAQPage from "./pages/FAQPage";
 import ContactUsPage from "./pages/ContactUsPage";
 import PartnerWithUsPage from "./pages/PartnerWithUsPage";
 import LoginPage from "./pages/LoginPage";
-import JoinPage from "./pages/JoinPage";
 import ComingSoon from "./pages/ComingSoon";
 import CareerQuiz from "./pages/CareerQuiz";
 import EnrollPage from "./pages/EnrollPage";
