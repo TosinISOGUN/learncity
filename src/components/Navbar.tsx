@@ -26,9 +26,6 @@ const navItems: NavItem[] = [
       { to: "/courses", label: "Courses" },
       { to: "/private-tutor", label: "Private Tutor" },
       { to: "/events", label: "Events" },
-      { to: "/seminars", label: "Seminars" },
-      { to: "/training", label: "Training" },
-      { to: "/jobs", label: "Job Openings" },
     ],
   },
   {

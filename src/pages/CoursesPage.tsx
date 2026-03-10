@@ -5,6 +5,7 @@ import { Clock, ArrowRight, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import PageLayout from "@/components/PageLayout";
+import PriceDisplay from "@/components/PriceDisplay";
 
 const CoursesPage = () => {
   const [category, setCategory] = useState("All");
@@ -74,7 +75,7 @@ const CoursesPage = () => {
                 <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{p.shortDescription}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-muted-foreground flex items-center gap-1"><Clock className="h-3.5 w-3.5" /> {p.duration}</span>
-                  <span className="font-display font-bold text-sm">{p.price}</span>
+                  <PriceDisplay price={p.price} className="font-display font-bold text-sm" />
                 </div>
                 <div className="mt-4 flex items-center text-primary text-sm font-medium">View Details <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" /></div>
               </Link>

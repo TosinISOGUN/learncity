@@ -13,8 +13,10 @@ import img3 from "@/assets/learncity_images/images/Eso-6-opt.webp";
 import img4 from "@/assets/learncity_images/images/Eso-8-opt.webp";
 import img5 from "@/assets/learncity_images/images/Eso-10-opt.webp";
 
-// Mock accreditation logos/images if not available
+// Accreditation logos
 import logoPlaceholder from "@/assets/LC_logo.webp";
+import aftLogo from "@/assets/aft-logo.webp";
+import careerLinkLogo from "@/assets/career-link logo.webp";
 
 const carouselImages = [img1, img2, img3, img4, img5];
 
@@ -98,17 +100,14 @@ const HighlightSection = () => {
             >
               <div className="relative z-10">
                 <p className="font-medium text-white/90 mb-2 text-sm md:text-base">Learncity is Proudly Accredited by:</p>
-                <div className="flex gap-1 mb-4 text-accent">
-                  {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
-                </div>
                 <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-3 md:p-4 flex flex-col gap-3 border border-white/10">
                   <div className="flex items-center gap-3">
-                    <img src={logoPlaceholder} alt="Adaptive Future Technologies Accreditation Logo" className="w-5 h-5 flex-shrink-0 object-contain invert" />
+                    <img src={aftLogo} alt="Adaptive Future Technologies Accreditation Logo" className="w-8 h-8 flex-shrink-0 object-contain rounded" />
                     <span className="font-bold uppercase tracking-wider text-[10px] sm:text-xs leading-tight">ADAPTIVE FUTURE TECHNOLOGIES</span>
                   </div>
                   <div className="h-px bg-white/10" />
                   <div className="flex items-center gap-3">
-                    <img src={logoPlaceholder} alt="CareerLink Partner Logo" className="w-5 h-5 flex-shrink-0 object-contain invert" />
+                    <img src={careerLinkLogo} alt="CareerLink Partner Logo" className="w-8 h-8 flex-shrink-0 object-contain rounded" />
                     <span className="font-bold uppercase tracking-wider text-[10px] sm:text-xs leading-tight">CAREERLINK</span>
                   </div>
                 </div>

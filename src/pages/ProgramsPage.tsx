@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PriceDisplay from "@/components/PriceDisplay";
 
 const ProgramsPage = () => {
   const [category, setCategory] = useState("All");
@@ -38,11 +39,10 @@ const ProgramsPage = () => {
                   <button
                     key={c}
                     onClick={() => setCategory(c)}
-                    className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${
-                      category === c
+                    className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${category === c
                         ? "bg-primary text-primary-foreground border-primary"
                         : "bg-card text-muted-foreground border-border hover:border-primary/50"
-                    }`}
+                      }`}
                   >
                     {c}
                   </button>
@@ -56,11 +56,10 @@ const ProgramsPage = () => {
                   <button
                     key={l}
                     onClick={() => setLevel(l)}
-                    className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${
-                      level === l
+                    className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${level === l
                         ? "bg-primary text-primary-foreground border-primary"
                         : "bg-card text-muted-foreground border-border hover:border-primary/50"
-                    }`}
+                      }`}
                   >
                     {l}
                   </button>
@@ -98,7 +97,7 @@ const ProgramsPage = () => {
                     <span className="text-xs text-muted-foreground flex items-center gap-1">
                       <Clock className="h-3.5 w-3.5" /> {p.duration}
                     </span>
-                    <span className="font-display font-bold text-sm">{p.price}</span>
+                    <PriceDisplay price={p.price} className="font-display font-bold text-sm" />
                   </div>
                   <div className="mt-4 flex items-center text-primary text-sm font-medium">
                     View Details <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" />

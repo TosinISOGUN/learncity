@@ -4,7 +4,6 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const locations = [
   { city: "Ibadan (HQ)", address: "3, Olubi Close, New Bodija Estate, Ibadan, Oyo State", phone: "+234 810 792 7525", email: "infolearncity@gmail.com", hours: "Mon – Fri: 9AM – 5PM", desc: "Our primary campus in Ibadan. Fully equipped labs, collaborative spaces, and a vibrant learning community." },
-  { city: "Lagos Hub", address: "Connect with us for Lagos schedules", phone: "+234 810 792 7525", email: "infolearncity@gmail.com", hours: "By Appointment", desc: "Flexible learning options and periodic workshops in Lagos. Contact us for the current schedule." },
   { city: "Virtual Campus", address: "Anywhere with internet", phone: "+234 810 792 7525", email: "infolearncity@gmail.com", hours: "Flexible scheduling available", desc: "Our virtual campus brings the full Learncity experience to your screen — live classes, mentorship, and community." },
 ];
 

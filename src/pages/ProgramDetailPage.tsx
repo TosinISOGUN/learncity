@@ -5,6 +5,7 @@ import { ArrowLeft, Clock, MapPin, GraduationCap, CheckCircle2 } from "lucide-re
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PriceDisplay from "@/components/PriceDisplay";
 
 const ProgramDetailPage = () => {
   const { id } = useParams();
@@ -110,7 +111,7 @@ const ProgramDetailPage = () => {
             >
               <div className="sticky top-24 bg-card border border-border rounded-xl p-6 card-elevated space-y-6">
                 <div className="text-center">
-                  <div className="font-display text-3xl font-bold mb-1">{program.price}</div>
+                  <PriceDisplay price={program.price} className="font-display text-3xl font-bold" />
                   <div className="text-sm text-muted-foreground">Full program fee</div>
                 </div>
 

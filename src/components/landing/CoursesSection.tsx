@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { programs } from "@/data/programs";
 import { Clock, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import PriceDisplay from "@/components/PriceDisplay";
 
 const CoursesSection = () => {
   const featured = programs.slice(0, 4);
@@ -46,7 +47,7 @@ const CoursesSection = () => {
                   <span className="text-xs text-muted-foreground flex items-center gap-1">
                     <Clock className="h-3.5 w-3.5" /> {p.duration}
                   </span>
-                  <span className="font-display font-bold text-sm">{p.price}</span>
+                  <PriceDisplay price={p.price} className="font-display font-bold text-sm" />
                 </div>
               </Link>
             </motion.div>

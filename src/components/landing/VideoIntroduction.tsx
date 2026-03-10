@@ -83,13 +83,13 @@ const VideoIntroduction = () => {
             <div className="relative aspect-video rounded-3xl overflow-hidden border-4 border-white/10 shadow-2xl bg-black group/video">
               <video
                 ref={videoRef}
-                src={hasStarted ? "/LC_introduction.mp4" : undefined}
+                src="/LC_introduction.mp4"
                 className="w-full h-full object-cover"
                 controls={hasStarted}
                 muted
                 loop
                 playsInline
-                preload="none"
+                preload="metadata"
                 onPlay={() => {
                   setIsPlaying(true);
                   setHasStarted(true);
@@ -97,37 +97,6 @@ const VideoIntroduction = () => {
                 onPause={() => setIsPlaying(false)}
                 onEnded={() => setIsPlaying(false)}
               />
-
-              {!hasStarted && (
-                <motion.div
-                  initial={{ opacity: 1 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="absolute inset-0 cursor-pointer"
-                  onClick={handlePlay}
-                >
-                  {/* Play Nudge Overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
-                    <motion.div
-                      animate={{ scale: [1, 1.1, 1] }}
-                      transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-                      className="w-16 h-16 md:w-20 md:h-20 bg-primary/90 text-primary-foreground rounded-full flex items-center justify-center shadow-2xl backdrop-blur-sm"
-                    >
-                      <Play className="h-8 w-8 md:h-10 md:w-10 fill-current ml-1" />
-                    </motion.div>
-                  </div>
-
-                  {/* Duration Badge */}
-                  <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2.5 py-1 rounded-lg border border-white/10 flex items-center gap-1.5 uppercase tracking-widest pointer-events-none">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                    30s Intro
-                  </div>
-                </motion.div>
-              )}
-
-              {!isPlaying && (
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-              )}
             </div>
 
             {/* Mobile CTA: Relocated to the bottom */}

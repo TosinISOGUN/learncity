@@ -11,9 +11,6 @@ import ProgramDetailPage from "./pages/ProgramDetailPage";
 import CoursesPage from "./pages/CoursesPage";
 import PrivateTutorPage from "./pages/PrivateTutorPage";
 import EventsPage from "./pages/EventsPage";
-import SeminarsPage from "./pages/SeminarsPage";
-import TrainingPage from "./pages/TrainingPage";
-import JobOpeningsPage from "./pages/JobOpeningsPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import LocationsPage from "./pages/LocationsPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
@@ -46,9 +43,6 @@ const App = () => (
             <Route path="/courses" element={<CoursesPage />} />
             <Route path="/private-tutor" element={<PrivateTutorPage />} />
             <Route path="/events" element={<EventsPage />} />
-            <Route path="/seminars" element={<SeminarsPage />} />
-            <Route path="/training" element={<TrainingPage />} />
-            <Route path="/jobs" element={<JobOpeningsPage />} />
             <Route path="/about" element={<AboutUsPage />} />
             <Route path="/locations" element={<LocationsPage />} />
             <Route path="/testimonials" element={<TestimonialsPage />} />

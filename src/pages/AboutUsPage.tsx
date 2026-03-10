@@ -10,10 +10,10 @@ const values = [
 ];
 
 const team = [
-  { name: "Chuka Eze", role: "Founder & CEO", bio: "EdTech entrepreneur with a vision to democratize tech education across Africa." },
-  { name: "Amara Nwosu", role: "Head of Curriculum", bio: "Former product designer turned educator. Ensures every program meets industry standards." },
-  { name: "David Okonkwo", role: "Head of Engineering Programs", bio: "Senior software engineer who built curriculum used by 2,000+ students." },
-  { name: "Funke Olawale", role: "Head of Growth", bio: "Marketing strategist passionate about connecting learners with life-changing opportunities." },
+  { name: "Komolafe Temiloluwa", role: "Lead Software Engineer", bio: "Leads our Full Stack, Backend, and Vibe Coding programs. Passionate about building scalable web applications." },
+  { name: "Olamide Olusegun", role: "Head of Creative Media", bio: "Oversees Graphics Design, Video Editing, and Content Creation programs. A visual storyteller at heart." },
+  { name: "Olabode Ajetunmobi", role: "Head of Growth & Management", bio: "Leads Digital Marketing and Project Management programs. Focused on empowering future business leaders." },
+  { name: "Oluwatomisin Isogun", role: "Frontend Engineering Lead", bio: "Heads our Frontend Development program. Dedicated to making the web beautiful and accessible for everyone." },
 ];
 
 const AboutUsPage = () => (
