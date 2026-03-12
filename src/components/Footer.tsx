@@ -15,10 +15,7 @@ const Footer = () => (
           <ul className="space-y-2 text-sm opacity-70">
             <li><Link to="/courses" className="hover:opacity-100 transition-opacity">Courses</Link></li>
             <li><Link to="/private-tutor" className="hover:opacity-100 transition-opacity">Private Tutor</Link></li>
-            <li><Link to="/training" className="hover:opacity-100 transition-opacity">Training</Link></li>
             <li><Link to="/events" className="hover:opacity-100 transition-opacity">Events</Link></li>
-            <li><Link to="/seminars" className="hover:opacity-100 transition-opacity">Seminars</Link></li>
-            <li><Link to="/jobs" className="hover:opacity-100 transition-opacity">Job Openings</Link></li>
             <li><a href="https://www.youtube.com/@Learncityng" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-opacity">YouTube Channel</a></li>
           </ul>
         </div>
