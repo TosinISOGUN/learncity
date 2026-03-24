@@ -5,7 +5,8 @@ const Footer = () => (
     <div className="container mx-auto px-4 py-16">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
-          <h3 className="font-display text-2xl font-bold mb-4">Learncity</h3>
+          <h3 className="font-display text-2xl font-bold mb-1">Learncity</h3>
+          <p className="text-primary text-xs font-bold uppercase tracking-widest mb-4">Rethink Learning</p>
           <p className="text-sm opacity-70 leading-relaxed">
             Practical, career-focused tech education. We equip learners with the skills, mentorship, and confidence to thrive in the digital economy.
           </p>

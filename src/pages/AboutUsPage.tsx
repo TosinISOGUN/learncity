@@ -20,7 +20,8 @@ const AboutUsPage = () => (
   <PageLayout>
     <div className="container mx-auto px-4">
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl mb-16">
-        <h1 className="text-3xl md:text-4xl font-bold mb-4">About Learncity</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-2">About Learncity</h1>
+        <p className="text-primary font-display font-bold text-xl mb-4 italic">Rethink Learning</p>
         <p className="text-muted-foreground text-lg leading-relaxed">
           Learncity was founded on a simple belief: everyone deserves access to high-quality tech education, regardless of background. We bridge the gap between ambition and ability — turning curious beginners into confident professionals ready for the modern workforce.
         </p>

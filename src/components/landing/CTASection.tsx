@@ -12,6 +12,7 @@ const CTASection = () => (
         viewport={{ once: true }}
       >
         <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">
+          <span className="block text-accent text-lg md:text-xl uppercase tracking-widest mb-2 font-display">Rethink Learning</span>
           Ready to Start Your Tech Journey?
         </h2>
         <p className="text-primary-foreground/70 max-w-lg mx-auto mb-8">

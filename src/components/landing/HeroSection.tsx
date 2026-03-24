@@ -19,7 +19,7 @@ const HeroSection = () => (
           transition={{ duration: 0.7 }}
         >
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-6">
-            New cohort starting soon 🚀
+            Rethink Learning
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
             Your Future in Tech{" "}
