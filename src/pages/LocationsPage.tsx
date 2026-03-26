@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const locations = [
-  { city: "Ibadan (HQ)", address: "3, Olubi Close, New Bodija Estate, Ibadan, Oyo State", phone: "+234 810 792 7525", email: "infolearncity@gmail.com", hours: "Mon – Fri: 9AM – 5PM", desc: "Our primary campus in Ibadan. Fully equipped labs, collaborative spaces, and a vibrant learning community." },
-  { city: "Virtual Campus", address: "Anywhere with internet", phone: "+234 810 792 7525", email: "infolearncity@gmail.com", hours: "Flexible scheduling available", desc: "Our virtual campus brings the full Learncity experience to your screen — live classes, mentorship, and community." },
+  { city: "Ibadan (HQ)", address: "3, Olubi Close, New Bodija Estate, Ibadan, Oyo State", phone: "+234 802 711 1400", email: "infolearncity@gmail.com", hours: "Mon – Fri: 9AM – 5PM", desc: "Our primary campus in Ibadan. Fully equipped labs, collaborative spaces, and a vibrant learning community." },
+  { city: "Virtual Campus", address: "Anywhere with internet", phone: "+234 802 711 1400", email: "infolearncity@gmail.com", hours: "Flexible scheduling available", desc: "Our virtual campus brings the full Learncity experience to your screen — live classes, mentorship, and community." },
 ];
 
 const LocationsPage = () => (

@@ -44,9 +44,9 @@ const ContactUsPage = () => {
   };
 
   const locations = [
-    { city: "Ibadan (HQ)", address: "3, Olubi Close, New Bodija Estate, Ibadan, Oyo State", phone: "+234 810 792 7525", email: "infolearncity@gmail.com", hours: "Mon – Fri: 8AM – 6PM, Sat: 9AM – 3PM", desc: "Our main campus in the historic city of Ibadan. Fully equipped labs, collaborative spaces, and a vibrant learning community." },
+    { city: "Ibadan (HQ)", address: "3, Olubi Close, New Bodija Estate, Ibadan, Oyo State", phone: "+234 802 711 1400", email: "infolearncity@gmail.com", hours: "Mon – Fri: 8AM – 6PM, Sat: 9AM – 3PM", desc: "Our main campus in the historic city of Ibadan. Fully equipped labs, collaborative spaces, and a vibrant learning community." },
     { city: "Lagos", address: "42 Adeola Odeku Street, Victoria Island, Lagos", phone: "+234 801 234 5678", email: "lagos@learncity.com", hours: "Mon – Fri: 8AM – 6PM, Sat: 9AM – 3PM", desc: "A modern learning center in the heart of Lagos. Ideal for professionals and students in the commercial hub." },
-    { city: "Virtual Campus", address: "Anywhere with internet", phone: "+234 810 792 7525", email: "infolearncity@gmail.com", hours: "Flexible scheduling available", desc: "Can't visit in person? Our virtual campus brings the full Learncity experience to your screen — live classes, mentorship, and community." },
+    { city: "Virtual Campus", address: "Anywhere with internet", phone: "+234 802 711 1400", email: "infolearncity@gmail.com", hours: "Flexible scheduling available", desc: "Can't visit in person? Our virtual campus brings the full Learncity experience to your screen — live classes, mentorship, and community." },
   ];
 
   const ibadanLocation = locations[0];
@@ -93,7 +93,7 @@ const ContactUsPage = () => {
               <h3 className="font-display font-bold mb-4">Contact Information</h3>
               <div className="space-y-4 text-sm text-muted-foreground">
                 <div className="flex items-start gap-3"><Mail className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" /><div><div className="font-medium text-foreground">Email</div>infolearncity@gmail.com</div></div>
-                <div className="flex items-start gap-3"><Phone className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" /><div><div className="font-medium text-foreground">Phone</div>+234 810 792 7525</div></div>
+                <div className="flex items-start gap-3"><Phone className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" /><div><div className="font-medium text-foreground">Phone</div>+234 802 711 1400</div></div>
                 <div className="flex items-start gap-3"><MapPin className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" /><div><div className="font-medium text-foreground">Address</div>3, Olubi Close, New Bodija Estate, Ibadan, Oyo State</div></div>
               </div>
             </div>
