@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/landing/HeroSection";
 import HighlightSection from "@/components/landing/HighlightSection";
+import FreeBookModal from "@/components/landing/FreeBookModal";
 
 import CoursesSection from "@/components/landing/CoursesSection";
 
@@ -24,6 +25,7 @@ const SectionSkeleton = ({ height = "h-64" }: { height?: string }) => (
 const Index = () => (
   <>
     <Navbar />
+    <FreeBookModal />
     <main className="scroll-smooth">
       <HeroSection />
       <HighlightSection />
